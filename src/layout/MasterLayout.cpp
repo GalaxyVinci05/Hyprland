@@ -178,7 +178,7 @@ void CHyprMasterLayout::onWindowCreatedTiling(PHLWINDOW pWindow, eDirection dire
 
     if ((BNEWISMASTER && g_pInputManager->dragMode != MBIND_MOVE)                   //
         || WINDOWSONWORKSPACE == 1                                                  //
-        || (WINDOWSONWORKSPACE > 2 && !pWindow->m_bFirstMap && OPENINGON->isMaster) //
+        || (WINDOWSONWORKSPACE > 2 && !pWindow->m_bFirstMap && OPENINGON && OPENINGON->isMaster) //
         || forceDropAsMaster                                                        //
         || (*PNEWSTATUS == "inherit" && OPENINGON && OPENINGON->isMaster && g_pInputManager->dragMode != MBIND_MOVE)) {
 
